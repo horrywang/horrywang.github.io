@@ -1,4 +1,2 @@
 User-agent: *
 Disallow: 
-
-Sitemap: http://horrywang.github.io/sitemap.xml 
