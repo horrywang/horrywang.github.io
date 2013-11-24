@@ -21,7 +21,7 @@
   <link href="/atom.xml" rel="alternate" title="疯即才" type="application/atom+xml">
 
   <link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="/assets/bootstrap/dist/css/blackjack.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/bootstrap/dist/css/jounal.min.css" rel="stylesheet" type="text/css">
 <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 
 
@@ -141,84 +141,12 @@
 
 <p>至于怎么爽，我坚信这个是因人而异的，而且是谁用谁知道。<a href="http://anxonli.iteye.com/blog/599379">分享一些程序员的办公桌</a>给了一些图片，看起来就很爽有木有。换个角度说，作为一名程序员，在Apple把一切软件系统都免费提供的前提下，不体验一下Mac开发环境不会有点遗憾么？</p>
 
-<hr />
-
-<h2>搭建开发环境</h2>
-
-<h3>OSX Mavericks</h3>
-
-<p>Mac OSX 10.9 Mavericks 免费了，所以没有理由现在还是其它系统了吧。而OSX本身就集成了很多工具，（参考<a href="https://developer.apple.com/cn/technologies/tools/features.html">官方介绍</a>）所以在打造之前需要搞清楚的是我们已经有了什么：</p>
-
-<ol>
-<li><p>脚本语言 Scripts Language</p>
-
-<p> AppleScript, Perl, Python, Ruby</p></li>
-<li><p>终端</p>
-
-<p> 默认终端Terminal，支持多标签，OSX要比Linux更像Unix，默认Shell为Bash，make，tar/zip等UNIX命令统统支持。</p></li>
-<li><p>编辑器</p>
-
-<p> TextEdit，xed(XCode的编辑器)，vi和emacs(关于二者的比较似乎又是一场圣战)</p></li>
-<li><p>Command Line Tools</p>
-
-<p> CLT在XCode5的download中不再有安装选项，让很多同志很费解，可事实上一旦需要用到CLT得时候，（比如敲入命令gcc或者make）Mavericks会自动提醒安装。若要单独下载可以到这里<a href="https://developer.apple.com/downloads/index.action?=command%20line%20tools">Downloads for Apple Developers</a>。</p>
-
-<p> 如果不确定是否已经安装可以键入：</p>
-
-<pre><code> $ xcode-select -p
-</code></pre>
-
-<p> 如果得到：</p>
-
-<pre><code> /Applications/Xcode.app/Contents/Developer
-</code></pre>
-
-<p> 就说明已经安装了。</p></li>
-</ol>
-
-
-<h3>编译器Xcode</h3>
-
-<p>Xcode5 于2013年发布，主要用于iOS7和OSX 10.9的应用开发，支持C，C++，Objective C，Java，Python，Ruby等，并提供5大API（Cocoa，Carbon，POSIX，X11和Java），还有CLang/LLVM编译支持。</p>
-
-<h3>homebrew</h3>
-
-<p>软件包管理系统，类似于Linux中APT，Yum等，homebrew让MacPorts成为历史。安装和特性详见<a href="http://brew.sh/index_zh-cn.html">Homebrew官方介绍</a></p>
-
-<h3>iTerm2</h3>
-
-<p>替代默认终端Terminal，多窗口模式和许多快捷键是亮点，安装和特性详见<a href="http://www.iterm2.com">iTerm2官网</a></p>
-
-<h3>Sublime Text 2</h3>
-
-<p>大家都叫这个神器，似乎终结了vim和emacs之间的圣战？<a href="http://www.iterm2.com">Sublime Text官网</a></p>
-
-<p>安装后可链接调用命令subl以便在shell中启动sublime text：</p>
-
-<pre><code>    $ sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/bin/subl
-</code></pre>
-
-<p>插件等其它资源参考<a href="http://ihower.tw/blog/archives/7375">Sublime Text 资源整理</a></p>
-
-<h3>oh_my_zsh</h3>
-
-<p>shell貌似又是一场永恒的圣战，WTF，为啥程序员这么爱打圣战？！私以为就是没啥大追求大理想只要纯粹的“爽”，在不断追求爽的过程中，程序员不断的突破已有的工具，写出更爽的工具来为己用。所以，运行以下命令看看折腾出多少种shell来：</p>
-
-<pre><code>    $ cat /etc/shell
-</code></pre>
-
-<p>bash是Mac和Linux默认的shell，而zsh是只有Mac预装的，zsh正如其名是终极shell，但由于太过强大复杂无人问津，直到有人写出了自动配置zsh的包，于是让所有程序员惊呼“<strong>oh my zsh！</strong>”。</p>
-
-<p>安装和主题配置参考<a href="https://github.com/robbyrussell/oh-my-zsh">oh_my_zsh github主页</a>.
-悲剧的程序员接下来一定会花一整晚时间来配置.zshrc和theme文件，参考<a href="http://macshuo.com/?tag=zsh">终极shell</a></p>
-
-<p>Mac开发环境的配置还可以参考博客：<a href="http://www.yangzhiping.com/tech/mac-dev.html">Mac开发者2013年新机设置参考</a></p>
-
-<hr />
-
-<p>搭建写作环境另起一篇:)</p>
 </div>
   
+  
+    <footer>
+      <a class="btn btn-default" rel="full-article" href="/2013/11/20/build-your-mac-into-a-magic-programming-tool/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -280,40 +208,12 @@
 </ol>
 
 
-<hr />
-
-<h3>前辈留下的经验和建议</h3>
-
-<p>看了很多给程序猿的建议，比较实际的是陈皓在CoolShell上的<a href="http://coolshell.cn/articles/4990.html">程序员技术练级攻略</a>和<a href="http://coolshell.cn/articles/4561.html">对程序员职业的一些建议</a>，他博客上还有很多关于其他方面的忠恳建议，引发了我许多思考；其他多为形而上的，总结起来不过以下几点：</p>
-
-<ol>
-<li>不盲目追逐新技术，踏实啃原理练基本功</li>
-<li>多思考深究，多动手尝试</li>
-<li>做好技术积累，比如笔记和博客</li>
-<li>多读书，开拓视野，领悟内核</li>
-</ol>
-
-
-<hr />
-
-<h3>我的规划</h3>
-
-<p>结合陈皓的练级攻略和我的工作内容，暂拟眼下能预见的时间里的计划如下：</p>
-
-<ol>
-<li>钻研C++，在实践上基于Qt框架进行</li>
-<li>读书，按StackOverFlow投票得出的<a href="http://stackoverflow.com/questions/1711/what-is-the-single-most-influential-book-every-programmer-should-read">每个程序员都应该啃的最具影响力的书籍</a>这个书单来吧，坚持总结读后感</li>
-<li>学习Ruby</li>
-<li>坚持写博客，系统总结学习成果</li>
-<li>坚持锻炼身体:)</li>
-</ol>
-
-
-<hr />
-
-<p>最后，Hello! Geek&rsquo;s World! I&rsquo;m coming!</p>
 </div>
   
+  
+    <footer>
+      <a class="btn btn-default" rel="full-article" href="/2013/11/18/hello-geeks-world/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -350,6 +250,32 @@
 </section>
 
 
+<section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Categories</h3>
+  </div>
+  <div class="list-group">
+    
+    
+    <a class="list-group-item " href="/blog/categories/helloworld/index.html">
+        <span class="badge">1</span>
+        helloworld
+      </a>
+    
+    
+    <a class="list-group-item " href="/blog/categories/mac/index.html">
+        <span class="badge">1</span>
+        Mac
+      </a>
+    
+    
+    <a class="list-group-item " href="/blog/categories/环境配置/index.html">
+        <span class="badge">1</span>
+        环境配置
+      </a>
+    
+  </div>
+</section>
 
 
       
